@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(#1ab792, #61b7ac);
+  padding: 10px;
+}
+.app-container {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 20px;
+}
+.app-container h1 {
+  color: black;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.app-container img {
+  width: 20px;
+  height: 35px;
+  margin-left: 10px;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+}
+.todo-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: rgba(207, 203, 203, 0.604);
+  flex: 1;
+  /* background: transparent; */
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+button {
+  padding: 16px;
+  background-color: rgb(62, 158, 62);
+  border-radius: 10px;
+  border: none;
+  height: 39.5px;
+  display: flex;
+  align-items: center;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(assets/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  color: #9e0c0c;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(assets/checked.png);
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #9b1616cb;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+ul li span:hover {
+  background: #c5231d;
+  color: #fff;
+}
+
+@media (max-width: 305px) {
+  .app-container {
+    width: 70%;
+  }
+  .todo-form {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 5px;
+    margin-bottom: 25px;
+  }
+  input {
+    padding: 10px;
+    border-radius: 10px;
+    width: auto;
+  }
+}
+/* @media (max-width: 250px) {
+    .app-container {
+      width: 50%;
+    }
+    .todo-form {
+      display: flex;
+      flex-direction: column;
+  
+      padding-left: 5px;
+      margin-bottom: 25px;
+    }
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      width: auto;
+    }
+  } */
